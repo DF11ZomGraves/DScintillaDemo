@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Highlighter desc="Object Pascal(Delphi)" type="pascal">
+	<attr desc="Default" type="0" italic="0" bold="0" backColor="536870911" foreColor="0"/>
+	<attr desc="Identifer" type="1" italic="0" bold="0" backColor="536870911" foreColor="0"/>
+	<attr desc="Comment1" type="2" italic="1" bold="0" backColor="536870911" foreColor="32768"/>
+	<attr desc="Comment2" type="3" italic="1" bold="0" backColor="536870911" foreColor="32768"/>
+	<attr desc="Line Comment" type="4" italic="1" bold="0" backColor="536870911" foreColor="32768"/>
+	<attr desc="Prepocessor1" type="5" italic="0" bold="0" backColor="536870911" foreColor="8421376"/>
+	<attr desc="Prepocessor2" type="6" italic="0" bold="0" backColor="536870911" foreColor="8421376"/>
+	<attr desc="Number" type="7" italic="0" bold="0" backColor="536870911" foreColor="16711680"/>
+	<attr desc="Hex" type="8" italic="0" bold="0" backColor="536870911" foreColor="16711680"/>
+	<attr desc="Keywords" type="9" italic="0" bold="1" backColor="536870911" foreColor="8388608"/>
+	<attr desc="String" type="10" italic="0" bold="0" backColor="536870911" foreColor="16711680"/>
+	<attr desc="StringEoL" type="11" italic="0" bold="0" backColor="536870911" foreColor="255"/>
+	<attr desc="Character" type="12" italic="0" bold="0" backColor="536870911" foreColor="16711680"/>
+	<attr desc="Symbol" type="13" italic="0" bold="0" backColor="536870911" foreColor="0"/>
+	<Keywords set="0">absolute abstract and array as asm assembler automated begin case cdecl class const constructor delayed deprecated destructor dispid dispinterface div do downto dynamic else end except experimental export exports external far file final finalization finally for forward function goto helper if implementation in inherited initialization inline interface is label library message mod near nil not object of on operator or out overload override packed pascal platform private procedure program property protected public published raise record reference register reintroduce repeat resourcestring safecall sealed set shl shr static stdcall strict string then threadvar to try type unit unsafe until uses var varargs virtual while winapi with xor</Keywords>
+</Highlighter>
