@@ -48,7 +48,6 @@ type
       AOptions: TSearchOptionsSet);
     function GetSearchCount(const ASearchStr: string;
       AOptions: TSearchOptionsSet): Integer;
-    procedure ConvertStr(const AType: Integer);
     property Highlighter: string read FHighlighterStr write FHighlighterStr;
     property CurrentFile: string read FFileName write FFileName;
     property Encoding: string read FEncoding write FEncoding;
@@ -130,18 +129,6 @@ begin
 end;
 
 { TScintillaEx }
-
-procedure TScintillaEx.ConvertStr(const AType: Integer);
-var
-  s: string;
-begin
-  s := GetSelText;
-  case AType of
-    1: s := SysUtils.LowerCase(s);
-    2: s := SysUtils.UpperCase(s);
-  end;
-  ReplaceSel(s);
-end;
 
 constructor TScintillaEx.Create(AOwner: TComponent);
 begin
@@ -228,7 +215,7 @@ const
     SetProperty('fold', '1');
     SetMarginTypeN(MARGIN_FOLD, SC_MARGIN_SYMBOL);
     SetMarginMaskN(MARGIN_FOLD, SC_MASK_FOLDERS);
-    SetMarginWidthN(MARGIN_FOLD, 16);
+    SetMarginWidthN(MARGIN_FOLD, 12);
     SetMarginSensitiveN(MARGIN_FOLD, True);
     MarkerDefine(SC_MARKNUM_FOLDER, SC_MARK_BOXPLUS);
     MarkerDefine(SC_MARKNUM_FOLDEROPEN, SC_MARK_BOXMINUS);
@@ -273,6 +260,7 @@ begin
   SetLexerLanguage(ALexerName);
   SetEditorStyle;
   if ALexerName = '' then begin
+    SetMarginWidthN(MARGIN_FOLD, 0);
     SetProperty('fold', '0');
     SetMarginSensitiveN(MARGIN_FOLD, False);
     FHighlighterStr := 'Plain text';

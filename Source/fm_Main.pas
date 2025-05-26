@@ -226,12 +226,12 @@ end;
 
 procedure TfmMain.acEditToLCaseExecute(Sender: TObject);
 begin
-  Scite.ConvertStr(1);
+  Scite.LowerCase;
 end;
 
 procedure TfmMain.acEditToUCaseExecute(Sender: TObject);
 begin
-  Scite.ConvertStr(2);
+  Scite.UpperCase;
 end;
 
 procedure TfmMain.acEditUndoExecute(Sender: TObject);
@@ -559,7 +559,7 @@ procedure TfmMain.FormCreate(Sender: TObject);
 begin
   DragAcceptFiles(Self.Handle, True);
   FFileNo := 0;
-  LoadLibrary(cDSciLexerDll);
+  //LoadLibrary(cDSciLexerDll);
   LoadXmlConfig;
   LoadXmlList;
   acFileNew.Execute;

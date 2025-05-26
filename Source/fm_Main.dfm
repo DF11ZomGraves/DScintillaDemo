@@ -263,6 +263,7 @@ object fmMain: TfmMain
       end
       object R2: TMenuItem
         Action = acFileRecovery
+        Caption = '&Revert'
       end
       object N2: TMenuItem
         Caption = '-'
